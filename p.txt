@@ -1,0 +1,28 @@
+./no_sqL_dbms library insert '{"title": "Война и мир", "author": "Лев Толстой", "year": 1869, "genre": "роман", "pages": 1225, "available": true}'
+./no_sqL_dbms library insert '{"title": "Преступление и наказание", "author": "Фёдор Достоевский", "year": 1866, "genre": "роман", "pages": 671, "available": false}'
+./no_sqL_dbms library insert '{"title": "Мастер и Маргарита", "author": "Михаил Булгаков", "year": 1967, "genre": "роман", "pages": 480, "available": true}'
+./no_sqL_dbms library insert '{"title": "1984", "author": "Джордж Оруэлл", "year": 1949, "genre": "антиутопия", "pages": 328, "available": true}'
+./no_sqL_dbms library insert '{"title": "Гарри Поттер и философский камень", "author": "Джоан Роулинг", "year": 1997, "genre": "фэнтези", "pages": 432, "available": true}'
+./no_sqL_dbms library insert '{"title": "Три товарища", "author": "Эрих Мария Ремарк", "year": 1936, "genre": "роман", "pages": 480, "available": false}'
+
+./no_sqL_dbms library find '{"author": "Лев Толстой"}'
+
+./no_sqL_dbms library find '{"genre": "роман"}'
+
+./no_sqL_dbms library find '{"year": {"$gt": 1899, "$lt": 2000}}'
+
+./no_sqL_dbms library find '{"year": {"$lt": 1900}}'
+
+./no_sqL_dbms library find '{"available": true, "genre": "роман", "year": {"$gt": 1899}}'
+
+./no_sqL_dbms library find '{"title": {"$like": "% и %"}}'
+
+./no_sqL_dbms library delete '{"title": "Мастер и Маргарита"}'
+
+./no_sqL_dbms library find '{"available": true}'
+
+./no_sqL_dbms library find '{"title": {"$like": "М%"}}'
+
+./no_sqL_dbms library find '{"author": {"$like": "% Д%"}}'
+
+./no_sqL_dbms library find '{}'
